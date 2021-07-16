@@ -47,8 +47,8 @@ public class IBAN {
 	public static void main(String[] args) {
 		Scanner teclado = new Scanner(System.in);
 		String cuenta;
-		BigInteger numIban, DCIban;
-		int intDCIban;
+		BigInteger numIban;
+		int DCIban;
 		
 		System.out.println("CÁLCULO DEL DC del IBAN");
 		System.out.print("Introduce el Número de Cuenta Corriente (CCC): ");
@@ -58,14 +58,13 @@ public class IBAN {
 			System.out.println("Debe introducir un número de cuenta válido (20 dígitos).");
 		} else {
 			numIban = new BigInteger(cuenta + "142800"); //ES00 = 14 28 00
-			DCIban = numIban.mod(new BigInteger("97"));
-			intDCIban = 98 - DCIban.intValue();
+			DCIban = 98 - numIban.mod(new BigInteger("97")).intValue();
 			
 			/*String aux = "0" + DCIban;
 			int largo = aux.length();
 			String codigo = "" + aux.charAt(largo-2) + aux.charAt(largo-1);*/
 					
-			System.out.println("ES"+ (intDCIban < 10 ? "0"+intDCIban : intDCIban) + cuenta);
+			System.out.println("ES"+ (DCIban < 10 ? "0"+DCIban : DCIban) + cuenta);
 		}		
 		teclado.close();
 	}
