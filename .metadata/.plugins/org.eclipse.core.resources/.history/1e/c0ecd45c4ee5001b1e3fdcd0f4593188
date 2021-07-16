@@ -1,5 +1,0 @@
-package fempa.bingoserver;
-
-public @interface ServerEndpoint {
-
-}
