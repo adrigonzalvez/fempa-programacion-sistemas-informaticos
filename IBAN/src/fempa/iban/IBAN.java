@@ -60,17 +60,21 @@ public class IBAN {
 			numIban = new BigInteger(cuenta + "142800"); //ES00 = 14 28 00
 			intDCIban = 98 - numIban.mod(new BigInteger("97")).intValue();
 			
-			/*String aux = "0" + DCIban;
+			// OBTENER EL DC DEL IBAN CON charAt():
+			/*String aux = "0" + intDCIban;
 			int largo = aux.length();
-			String codigo = "" + aux.charAt(largo-2) + aux.charAt(largo-1);*/
+			String codigo = "" + aux.charAt(largo-2) + aux.charAt(largo-1);
+			System.out.println("ES"+ codigo + cuenta);*/
 			
+			// OBTENER EL DC DEL IBAN CON IF Y AÑADIR EL 0 DELANTE:
 			if (intDCIban < 10) {
 				strDCIban = "0"+intDCIban;
 			} else {
 				strDCIban = String.valueOf(intDCIban);
 			}
-			
 			System.out.println("ES"+ strDCIban + cuenta);
+			
+			// OBTENER EL DC DEL IBAN CON OPERADOR TERNARIO:
 			//System.out.println("ES"+ (intDCIban < 10 ? "0"+intDCIban : intDCIban) + cuenta);
 					
 			
