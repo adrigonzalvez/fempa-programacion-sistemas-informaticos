@@ -6,8 +6,7 @@ public class Calculadora {
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-		
-		/*
+	
 		System.out.print("Introduce el primer número: ");
 		int A = in.nextInt();
 		
@@ -17,9 +16,8 @@ public class Calculadora {
 		int C = A + B;
 		
 		System.out.println("La suma es: " + C);
-		*/
 		
-		System.out.print("Introduce tu nombre: ");
+		/*System.out.print("Introduce tu nombre: ");
 		String nombre = in.nextLine();
 		
 		System.out.print("Introduce tu edad: ");
@@ -28,7 +26,7 @@ public class Calculadora {
 		System.out.print("Introduce tu altura: ");
 		float altura = in.nextFloat();
 		
-		System.out.println("Te llamas " + nombre + ", tienes " + edad + " años y mides " + altura + " m.");
+		System.out.println("Te llamas " + nombre + ", tienes " + edad + " años y mides " + altura + " m.");*/
 		
 		in.close();
 	}
