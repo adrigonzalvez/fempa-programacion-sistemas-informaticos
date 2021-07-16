@@ -1,0 +1,31 @@
+package fempa.bingoclient;
+
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.net.Socket;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.WebSocket;
+import java.net.http.WebSocket.Listener;
+import java.nio.ByteBuffer;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.CompletionStage;
+
+public class BingoClient {
+
+	public static void main(String[] args) {
+		try {
+			Socket socket = new Socket("localhost", 8080);
+			DataOutputStream dout = new DataOutputStream(socket.getOutputStream());  
+			dout.writeUTF("Hola Mundo");  
+			dout.flush();  
+			dout.close();  
+			socket.close();  
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}

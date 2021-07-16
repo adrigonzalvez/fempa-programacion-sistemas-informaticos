@@ -1,0 +1,11 @@
+package fempa.adivino;
+
+public class Adivino {
+
+	public static void main(String[] args) {
+		int numero = (int) (Math.random() * 5); // Math.random() -> Devuelve entre 0 y 0.9999
+		System.out.println("Número : " + numero);
+
+	}
+
+}

@@ -1,0 +1,24 @@
+package viernes.cadena;
+
+public class Cadenas {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		char c = 'b';
+		char e = 'e';
+		System.out.println(c + e); // 199 porque suma los valores en ASCII
+		System.out.println(String.valueOf(c) + String.valueOf(e)); // be
+		System.out.println(String.valueOf(c) + e); // be
+		System.out.println(Character.toString(c) + Character.toString(e)); // be
+		System.out.println(Character.toString(c) + e); // be
+		
+		String cadena;
+		cadena = "Hoy es lunes, mientes bellaco, es viernes";
+		
+		System.out.println(cadena);
+		
+		
+	}
+
+}

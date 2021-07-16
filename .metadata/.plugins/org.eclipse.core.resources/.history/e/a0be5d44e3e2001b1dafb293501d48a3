@@ -1,0 +1,39 @@
+package viernes.panelletras;
+
+import java.util.ArrayList;
+
+public class PanelLetras {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String frase = "Si el grajo vuela bajo hace un frío del carajo";
+		String fraseFinal = "";
+		for (int i=0; i < frase.length(); i++) {
+			if (frase.charAt(i) == ' ') {
+				fraseFinal += " ";
+			} else {
+				fraseFinal += "*";
+			}
+			
+		}
+		
+		System.out.println(frase);
+		System.out.println(fraseFinal);
+		
+		
+		char letra = 'a';
+		ArrayList<Integer> posiciones = new ArrayList<Integer>();
+		System.out.println(posiciones.size());
+		
+		while (frase.lastIndexOf(letra, posiciones.get(posiciones.size())) != -1) {
+			posiciones.add(frase.lastIndexOf(letra, posiciones.get(posiciones.size())));
+		}
+		
+		char[] charFraseFinal = fraseFinal.toCharArray();
+		for (int i=0; i < posiciones.size(); i++) {
+			charFraseFinal[posiciones.get(i)] = letra;
+		}
+		fraseFinal = charFraseFinal.toString();
+	}
+
+}

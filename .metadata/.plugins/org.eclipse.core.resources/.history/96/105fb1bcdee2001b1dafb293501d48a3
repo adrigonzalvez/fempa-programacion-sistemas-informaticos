@@ -1,0 +1,17 @@
+package viernes.panelletras;
+
+public class PanelLetras {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String frase = "Si el grajo vuela bajo hace un frío del carajo";
+		String fraseFinal = "";
+		for (int i=0; i < frase.length(); i++) {
+			fraseFinal += "*";
+		}
+		
+		String.out.println(frase);
+		String.out.println(fraseFinal);
+	}
+
+}

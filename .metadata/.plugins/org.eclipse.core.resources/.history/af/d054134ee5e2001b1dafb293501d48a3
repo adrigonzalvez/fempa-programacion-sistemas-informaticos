@@ -1,0 +1,49 @@
+package viernes.panelletras;
+
+import java.util.ArrayList;
+
+public class PanelLetras {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String frase = "Si el grajo vuela bajo hace un frío del carajo";
+		String fraseFinal = "";
+		for (int i=0; i < frase.length(); i++) {
+			if (frase.charAt(i) == ' ') {
+				fraseFinal += " ";
+			} else {
+				fraseFinal += "*";
+			}
+			
+		}
+		
+		System.out.println(frase);
+		System.out.println(fraseFinal);
+		
+		
+		char letra = 'a';
+		ArrayList<Integer> posiciones = new ArrayList<Integer>();
+		
+		if (frase.contains(String.valueOf(letra))) {
+			System.out.println("Correcto, la letra " + letra + " está en el panel.");
+			
+			while (frase.indexOf(letra, posiciones.get(posiciones.size())) != -1) {
+				posiciones.add(frase.indexOf(letra, posiciones.get(posiciones.size())));
+			}
+			
+			char[] charFraseFinal = fraseFinal.toCharArray();
+			for (int i=0; i < posiciones.size(); i++) {
+				charFraseFinal[posiciones.get(i)] = letra;
+			}
+			fraseFinal = charFraseFinal.toString();
+			
+		} else {
+			System.out.println("Lo siento, la letra " + letra + " no se encuentra en el panel.");
+		}
+		
+		
+		System.out.println(fraseFinal);
+		
+	}
+
+}

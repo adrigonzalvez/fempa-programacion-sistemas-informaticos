@@ -1,0 +1,86 @@
+package viernes.cadena;
+
+public class Cadenas {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		char c = 'b';
+		char e = 'e';
+		System.out.println(c + e); // 199 porque suma los valores en ASCII
+		System.out.println(String.valueOf(c) + String.valueOf(e)); // be
+		System.out.println(String.valueOf(c) + e); // be
+		System.out.println(Character.toString(c) + Character.toString(e)); // be
+		System.out.println(Character.toString(c) + e); // be
+		
+		String cadena;
+		cadena = "Hoy es lunes, mientes bellaco, es viernes";
+		System.out.println(cadena);
+		
+		cadena = "Hoy es lunes, 'mientes bellaco', es viernes";
+		System.out.println(cadena);
+		
+		//cadena = 'Hoy es lunes, mientes bellaco, es viernes'; // NO EXISTE EN JAVA, las ' ' son para caracteres
+		
+		System.out.println("Hola\n" + "\t" + cadena + "\nHe dicho.");
+		System.out.println("Hola\n\t" + cadena + "\nHe dicho.");
+		
+		cadena = " El día de mañana. ";
+		System.out.println("Longitud cad: " + cadena.length());
+		String cad1 = cadena.trim();
+		System.out.println("Longitud cad1: " + cad1.length());
+		
+		// Un sólo caracter
+		System.out.println(cad1.charAt(0) + cad1.charAt(3) + cad1.charAt(7) + cad1.charAt(10));	// 378 vuelve a sumar los códigos ASCII de los caracteres
+		System.out.println(Character.toString(cad1.charAt(0)) + cad1.charAt(3) + cad1.charAt(7) + cad1.charAt(10));
+
+		// Una Sub cadena
+		System.out.println(cad1.substring(7));
+		System.out.println(cad1.substring(3,6));
+		System.out.println(cad1.substring(10,16));
+		
+		// Búsqueda, nos devuelve la posición (int)
+		cadena = "El día de mañana.";
+		int pos = cadena.indexOf('a');
+		System.out.println("a está en: " + pos);
+		
+		pos = cadena.indexOf('a', pos + 1);
+		System.out.println("a está en: " + pos);
+		
+		pos = cadena.indexOf('a', pos + 1);
+		System.out.println("a está en: " + pos);
+		
+		
+		cadena = "El cielo es azul";
+		boolean resultado = cadena.startsWith("El");
+		System.out.println(resultado);
+		
+		resultado = 5 > 4;
+		System.out.println("5 > 4: " + resultado);
+		
+		resultado = 4 >= 4;
+		System.out.println("4 >= 4: " + resultado);
+		
+		resultado = 5 < 4;
+		System.out.println("5 < 4: " + resultado);
+		
+		resultado = 5 <= 4;
+		System.out.println("5 <= 4: " + resultado);
+		
+		resultado = 5 == 4;
+		System.out.println("5 == 4: " + resultado);
+		
+		resultado = 5 != 4;
+		System.out.println("5 != 4: " + resultado);
+		
+		resultado = (5 != 4) || (4 == 3);
+		System.out.println("(5 != 4) || (4 == 3): " + resultado);
+		
+		resultado = (5 != 4) && (4 == 3);
+		System.out.println("(5 != 4) && (4 == 3): " + resultado);
+		
+		cadena = "12";
+		System.out.println(cadena + 20);
+	}
+
+}

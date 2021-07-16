@@ -1,0 +1,58 @@
+package jueves.numero;
+
+public class Numero {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Hola amigo");
+		System.out.print("Saludos ");
+		System.out.print("amigo");
+		System.out.println("un placer");
+		
+		System.out.println("Ahora" + " " + "no me voy");
+		
+		String nombre = "Alicia";
+		int edad = 33;
+		double altura = 160;
+		float salario = 33432.5f;
+		
+		System.out.println(nombre + " tiene " + edad + " años y mide " + altura + " gana " + salario + " €");
+		
+		// NÚMEROS
+		int a,b;
+		int c = 33;
+		double s = 123.321, d;
+		
+		a = 12;
+		b = 33;
+		s = 2.5;
+		
+		// SUMA
+		d = a + b;
+		System.out.println("Suma es: " + c);
+		
+		// SUMA
+		d = a - b;
+		System.out.println("Resta es: " + c);
+		
+		// SUMA
+		d = a * b;
+		System.out.println("Multiplicación es: " + c);
+				
+		// SUMA
+		d = a / b;
+		System.out.println("División es: " + c);
+		
+		// SUMA
+		d = a % b;
+		System.out.println("Resto es: " + c);
+		
+		
+		//System.out.println("Suma: " + (a + b));
+		//System.out.println("Suma: " + d);
+		//System.out.println(12 + 33 + " la suma");
+		
+	}
+	
+
+}

@@ -1,0 +1,66 @@
+package viernes.panelletras;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class PanelLetras {
+
+	public static void main(String[] args) {
+		String frase = "Si el grajo vuela bajo hace un frio del carajo";
+		boolean finJuego = false;
+		Scanner sc = new Scanner(System.in);
+		
+		// Oculta la frase con *
+		String fraseOculta = "";
+		for (int i=0; i < frase.length(); i++) {
+			if (frase.charAt(i) == ' ') {
+				fraseOculta += " ";
+			} else {
+				fraseOculta += "*";
+			}
+		}
+		
+		// Muestra la frase:
+		System.out.println(frase);
+		System.out.println(fraseOculta);
+		
+		// El juego acaba cuando se hayan adivinado todas las letras:
+		while(!finJuego) {
+			
+			System.out.print("\nIntroduce una letra: ");
+			char letra = sc.nextLine().charAt(0);
+			
+			// Si la frase contiene la letra introducida por el usuario:
+			if (frase.contains(String.valueOf(letra))) {
+				System.out.println("Correcto, la letra " + letra + " está en el panel.");
+				
+				// Muestra la letra oculta en el panel:
+				char[] charfraseOculta = fraseOculta.toCharArray();
+				int cont = 0;
+				while (frase.indexOf(letra, cont) > -1) {
+					cont = frase.indexOf(letra, cont);
+					charfraseOculta[cont] = letra;
+					cont++;
+				}
+				fraseOculta = String.valueOf(charfraseOculta);
+				
+			} else {
+				System.out.println("Lo siento, la letra " + letra + " no se encuentra en el panel.");
+			}
+			
+			// Muestra la frase oculta con las letras ya adivinadas:
+			System.out.println(fraseOculta);
+			
+			// Comprueba si es el final del juego.
+			if (!fraseOculta.contains("*")) {
+				finJuego = true;
+			}
+			
+		}
+		
+		System.out.println("¡Enhorabuena! Has ganado.");
+		
+		sc.close();
+	}
+
+}

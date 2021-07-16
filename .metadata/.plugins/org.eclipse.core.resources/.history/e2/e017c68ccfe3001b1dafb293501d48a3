@@ -1,0 +1,38 @@
+package fempa.conversorcelsiusfahrenheit;
+
+import java.util.Scanner;
+
+public class ConversorCelsiusFahrenheit {
+
+	public static void main(String[] args) {
+		System.out.println("CONVERSOR CELSIUS / FAHRENHEIT");
+		System.out.println("\t1) CELSIUS A FAHRENHEIT");
+		System.out.println("\t2) FAHRENHEIT A CELSIUS");
+		System.out.print("Seleccione una opción: ");
+		Scanner sc = new Scanner(System.in);
+		int opcion = sc.nextInt();
+		double celsius, fahrenheit;
+		
+		switch (opcion) {
+			case 1:
+				System.out.print("Introduzca los grados Celsius a convertir: ");
+				celsius = sc.nextDouble();
+				fahrenheit = (9*celsius)/5 + 32;
+				//fahrenheit = (9/5)*celsius + 32;
+				System.out.println("Resultado: " + fahrenheit + " ºF");
+				break;
+			case 2:
+				System.out.print("Introduzca los grados Fahrenheit a convertir: ");
+				fahrenheit = sc.nextDouble();
+				celsius = (fahrenheit - 32)*5/9;
+				System.out.println("Resultado: " + celsius + " ºC");
+				break;
+			default:
+				System.out.println("Debe introducir una opción válida.");
+				break;
+		}
+		
+		sc.close();
+	}
+
+}

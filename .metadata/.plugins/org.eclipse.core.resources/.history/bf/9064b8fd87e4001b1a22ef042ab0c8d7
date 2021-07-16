@@ -1,0 +1,10 @@
+package fempa.letradni;
+
+public class LetraDNI {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,25 @@
+package fempa.teoremapitagoras;
+
+import java.util.Scanner;
+
+public class TeoremaPitagoras {
+
+	public static void main(String[] args) {
+		double cateto1, cateto2, hipotenusa;
+		Scanner teclado = new Scanner(System.in);
+		
+		System.out.print("Introduce el valor del cateto 1: ");
+		cateto1 = teclado.nextDouble();
+		
+		System.out.print("Introduce el valor del cateto 2: ");
+		cateto2 = teclado.nextDouble();
+		
+		hipotenusa = Math.sqrt(Math.pow(cateto1,2) + Math.pow(cateto2,2));
+		//hipotenusa = Math.hypot(cateto1, cateto2);		
+		
+		System.out.println("La hipotenusa es: " + hipotenusa);
+		
+		teclado.close();
+	}
+
+}

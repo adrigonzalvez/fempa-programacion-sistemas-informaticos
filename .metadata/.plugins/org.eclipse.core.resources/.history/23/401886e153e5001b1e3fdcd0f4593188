@@ -1,0 +1,16 @@
+package fempa.bingoserver;
+
+
+
+public class BingoServer {
+
+	public static void main(String[] args) {
+		WebSocket server
+		
+		
+
+	}
+	
+	
+
+}

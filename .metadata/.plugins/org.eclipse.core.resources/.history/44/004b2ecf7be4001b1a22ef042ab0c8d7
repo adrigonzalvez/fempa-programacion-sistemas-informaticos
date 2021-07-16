@@ -1,0 +1,46 @@
+package fempa.estructuracondicional;
+
+public class EstructuraCondicional {
+
+	public static void main(String[] args) {
+		int a = 9, b = 3;
+		//boolean mayorA = a > b;
+		
+		if (a > b)
+		{
+			System.out.println("A es el número mayor");
+			System.out.println("B es el menor");
+		}
+		else if (a == b) // 2 iguales al comparar
+		{
+			System.out.println("A y B son iguales");
+			System.out.println("B y A son iguales");
+		}
+		else if (a < b)
+		{
+			System.out.println("B es el número mayor");
+		}
+			
+		System.out.println("FIN");
+		
+		
+		
+		if ((a>=1 && a<5) || (b==0) ) {
+			int resultado = a/b;
+		}
+		
+		if (!(a>=1 && a<5)) {
+			
+		}
+		
+		boolean aMayorB = a>b;
+		
+		String cadena  = "Hola";
+		if (cadena == "Hola") {
+			System.out.println("Cadena es Hola");
+		} else {
+			System.out.println(Cadena no es Hola");
+		}
+	}
+
+}
