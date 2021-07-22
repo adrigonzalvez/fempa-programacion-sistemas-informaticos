@@ -3,7 +3,7 @@ package fempa.mayorymenortresnumeros;
 import java.util.Scanner;
 
 public class MayorYMenor3Numeros {
-
+	
 	public static void main(String[] args) {
 		float A, B, C;
 		Scanner teclado = new Scanner(System.in);
@@ -36,5 +36,6 @@ public class MayorYMenor3Numeros {
 
 		teclado.close();
 	}
+
 
 }
