@@ -20,7 +20,7 @@ public class TablaMultiplicarRepasarAleatorio {
 	public static void main(String[] args) {
 		Scanner teclado = new Scanner(System.in);
 		Random rand = new Random();
-		int aleatorio, tabla, resultadoUsuario, resultado;
+		int aleatorio, tabla, resultadoUsuario, resultadoCorrecto;
 		
 		System.out.println("REPASAR TABLAS DE MULTIPLICAR");
 		System.out.print("Dime qué tabla quieres repasar: ");
@@ -28,14 +28,15 @@ public class TablaMultiplicarRepasarAleatorio {
 		if (tabla > 0) {
 			for (int i = 0; i < 5; i++) {
 				aleatorio = rand.nextInt(10) + 1;	// rand.nextInt(max - min + 1) + min;
+				//aleatorio = (int) (Math.random() * 10 + 1);
 				System.out.print( tabla + " x " + aleatorio + " = ");
 				resultadoUsuario = teclado.nextInt();	// Lee el resultado del usuario
-				resultado = tabla*aleatorio;			// Calcula el resultado real
+				resultadoCorrecto = tabla*aleatorio;			// Calcula el resultado real
 				
-				if (resultadoUsuario == resultado) {		// Si ha acertado:
+				if (resultadoUsuario == resultadoCorrecto) {		// Si ha acertado:
 					System.out.println("Has acertado.");
 				} else {									// Si ha fallado:
-					System.out.println("Has fallado, el resultado era " + resultado);
+					System.out.println("Has fallado, el resultado era " + resultadoCorrecto);
 				}
 			}
 		} else {
