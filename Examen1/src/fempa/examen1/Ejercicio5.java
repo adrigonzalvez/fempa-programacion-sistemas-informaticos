@@ -112,6 +112,14 @@ public class Ejercicio5 {
 			} while(numeroActual < num2);
 		}
 		
+		// Opción 1: 2 bucles for, sólo se ejecutará el que corresponda.
+		/*for (int numeroActual = num2 + 1; numeroActual < num1; numeroActual++) {
+			System.out.print(numeroActual + " ");
+		}
+		for (int numeroActual = num1 + 1; numeroActual < num2; numeroActual++) {
+			System.out.print(numeroActual + " ");
+		}*/
+		
 		teclado.close();
 	}
 
