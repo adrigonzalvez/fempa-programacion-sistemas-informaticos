@@ -61,7 +61,7 @@ public class Bucles6_10 {
 			ejercicio9(teclado);
 			break;
 		case 5:
-			ejercicio10(teclado);
+			ejercicio10();
 			break;
 		default:
 			System.out.println("Opción no válida.");		
@@ -246,7 +246,7 @@ public class Bucles6_10 {
 	 * 
 	 * @param teclado
 	 */
-	public static void ejercicio10(Scanner teclado) {
+	public static void ejercicio10() {
 		System.out.println("\nEJERCICIO 10:");
 		
 		for (int i = 0; i < 8; i++) {
