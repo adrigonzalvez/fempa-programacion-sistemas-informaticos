@@ -166,6 +166,16 @@ public class Bucles1_5 {
 		System.out.println("\nEJERCICIO 4:");
 		filas = pideNumero(teclado, "Introduce el número de filas: ");
 		
+		ejercicio4_1(filas);
+		
+		// Si es impar:
+		if (filas%2 != 0) {
+			ejercicio4_2(filas);
+			ejercicio4_3(filas);
+		}	
+	}
+	
+	public static void ejercicio4_1(int filas) {
 		// Figura 1:
 		System.out.println("");
 		System.out.println("Figura 1:");
@@ -179,7 +189,9 @@ public class Bucles1_5 {
 			}
 			System.out.println("");
 		}
-		
+	}
+	
+	public static void ejercicio4_2(int filas) {
 		// Figura 2:
 		System.out.println("");
 		System.out.println("Figura 2:");
@@ -194,7 +206,9 @@ public class Bucles1_5 {
 			}
 			System.out.println("");
 		}
-		
+	}
+	
+	public static void ejercicio4_3(int filas) {
 		// Figura 3:
 		System.out.println("");
 		System.out.println("Figura 3:");
@@ -209,7 +223,6 @@ public class Bucles1_5 {
 			}
 			System.out.println("");
 		}
-
 	}
 	
 	/**
